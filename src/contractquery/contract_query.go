@@ -15,10 +15,7 @@ func main() {
 	if err != nil {
 		log.Fatal(err)
 	}
-	// ethClient, err := ethClientHelper.InitEthClient()
-	// if err != nil {
-	// 	log.Fatal(err)
-	// }
+
 	ethClient := ec.EthClient
 	cAddress := common.HexToAddress("0x999e88075692bCeE3dBC07e7E64cD32f39A1D3ab")
 	bc, err := ethClient.CodeAt(context.Background(), cAddress, nil)
